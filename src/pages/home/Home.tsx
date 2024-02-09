@@ -1,11 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-function Home() {
-  const [characters, setCharacters] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [searchTerm, setSearchTerm] = useState('');
+interface Character {
+  name: string;
+  mass: string;
+  height: string;
+  gender: string;
+}
+
+const Home: React.FC = () => {
+  const [characters, setCharacters] = useState<Character[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<Error | null | any>(null);
+  const [searchTerm, setSearchTerm] = useState<string>('');
 
   useEffect(() => {
     fetchCharacters();
@@ -30,7 +37,7 @@ function Home() {
     return character.name.toLowerCase().includes(searchTerm.toLowerCase());
   });
 
-  const handleSearch = event => {
+  const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
   };
 
