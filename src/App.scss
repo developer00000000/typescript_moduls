@@ -113,3 +113,49 @@ nav{
 .show{
   transform: translateY(0);
 }
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.input {
+  margin-bottom: 20px;
+}
+
+.character-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.character-card {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.character-card:hover {
+  background-color: #e0e0e0;
+}
+
+
+.character-details {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.character-details h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.character-details p {
+  margin: 10px 0;
+  color: #666;
+}
