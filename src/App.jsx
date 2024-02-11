@@ -6,6 +6,7 @@ import Blog from './pages/blog/Blog'
 import Contact from './pages/contact/Contact'
 import DetailPage from './pages/home/DetailPage'
 import { CharacterProvider } from './Contect'
+import BlogDetail from './pages/blog/BlogDetail'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
               <Route path='/detail/:id' element={<DetailPage/>}/>
               <Route index element={<Home/>}/>
               <Route path='/blog' element={<Blog/>}/>
+              <Route path='/blog/:id' element={<BlogDetail/>}/>
               <Route path='/contact' element={<Contact/>}/>
            </Route>
          </Routes>
